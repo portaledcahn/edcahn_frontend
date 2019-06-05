@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portal EDCA - Procesos de Comprador</title>
+      <meta name="description" content="Portal del Estandar de Datos de Contrataciones Abiertas en Honduras"/>
+      <meta name="keywords" content="OCDS, EDCA, Honduras, ONCAE, Contrataciones, Abiertas"/>
+      <link rel="stylesheet" href="plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="plugins/fontawesome-free-5.8.2/css/all.min.css" >
+      <link rel="stylesheet" href="plugins/animate-3.7.0/animate.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" >
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
+         <a class="navbar-brand" href="index.html">
+         <img src="img/logos/portalEdca.png" style="max-height: 40px" alt="Logo Portal Edca">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="barraNavegacionPortal">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="visualizaciones.html">Visualizaciones</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="proveedores.html">Proveedores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="compradores.html">Compradores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="api.html">API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="descargas.html">Descargas</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="textoColorPrimario mt-3 tituloDetalleProceso">Procesos de Comprador: UPNFM</h1>
+            </div>
+         </div>
+         <div class="row mt-3 mb-3 ">
+            <div class="col-lg-6">
+               <div class="campoAzulBusquedaPadre normal" style="margin-left:0">
+                  <input class="form-control form-control-lg campoAzulBusqueda" type="text" placeholder="Busca un proceso...">
+                  <i class="fas fa-search"></i>	
+               </div>
+            </div>
+            <div class="col-lg-6">
+               <h4 class="textoAlineadoDerecha mb-0 mt-3 descargaIconos">
+                  <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span>
+                  <span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span>
+               </h4>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class=" cajonSombreado ">
+                  <table class="tablaGeneral">
+                     <thead>
+                        <tr>
+                           <th>Proveedor</th>
+                           <th>Proceso</th>
+                           <th>Total </th>
+                           <th>Fecha </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">Larach</a> </td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">2,466,855,052 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">Gatsby Charitable Foundation</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">585,503,010 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">Guy's and St Thomas' Charity</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">232,603,843 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">Diunsa</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">1603,154,975 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">Leterago</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">345,085,077 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">Lufergo</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">1,494,536,773 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">Office Depot</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">1,056,769,597 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                        <tr>
+                           <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">Inversiones SA</a></td>
+                           <td data-label="Proceso"><a href="proceso.html" class="enlaceTablaGeneral">Lorem ipsum dolor sit amet consect</a> </td>
+                           <td data-label="Total">681,153,923 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Fecha">2018-02-19 10:02:54</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="col-md-12">
+               <h5 class="tituloTablaGeneral textoColorPrimario mt-3 mb-0" >Mostrando 0 a 4 de 4 Procesos</h5>
+            </div>
+            <div class="col-md-12 textoAlineadoCentrado">
+               <nav class="navegacionTablaGeneral">
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-left"></i></span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral  numeroNormalNavegacionTablaGeneral"><span>...</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1410</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1411</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral current"><span>1412</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1413</span></a><a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-right"></i></span></a>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <!-- PIE DE PAGINA -->
+      <footer class="page-footer font-small fondoColorGrisOscuroClaro pt-4">
+         <div class="container-fluid text-center text-md-left">
+            <div class="row">
+               <div class="col-md-3 mt-md-0 mt-3">
+                  <a href="https://www.presidencia.gob.hn/"><img src="img/footer/logorepublica.png" class="imagenFooterPrincipal" alt="Logo Presidencia de la República"></a>
+               </div>
+               <div class="col-md-3 mt-md-0 mt-3">
+                  <h5 class="text-uppercase textoColorBlanco">Portal EDCA </h5>
+                  <p class="textoColorBlanco textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
+               </div>
+               <hr class="clearfix w-100 d-md-none pb-3">
+               <div class="col-md-3 mb-md-0 mb-3">
+                  <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
+                  <ul class="list-unstyled textoColorBlanco">
+                     <li>
+                        <a href="http://www.oncae.gob.hn/">ONCAE</a>
+                     </li>
+                     <li>
+                        <a href="http://www.oncae.gob.hn/">SEFIN</a>
+                     </li>
+                     <li>
+                        <a href="https://sisocs.org/">SISOCS</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-3 mb-md-0 mb-3">
+                  <h5 class="text-uppercase textoColorBlanco"></h5>
+                  <ul class="list-unstyled textoColorBlanco">
+                     <li>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright text-center py-3 textoColorBlanco fondoColorGrisOscuro">Oficina Normativa de Contratación y Adquisiciones del Estado
+            <a href="" class="textoColorBlanco"> ONCAE</a>
+         </div>
+      </footer>
+      <!-- CIERRE DE PIE DE PAGINA -->
+      <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+      <script src="plugins/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+      <script src="plugins/countto/jquery.countTo.js"></script>
+      <script>
+         $('.opcionFiltroBusquedaPagina').on('click',function(e){
+           $(e.currentTarget).addClass('active')
+         })
+      </script>
+   </body>
+</html>

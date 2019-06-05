@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portal EDCA - Proceso</title>
+      <meta name="description" content="Portal del Estandar de Datos de Contrataciones Abiertas en Honduras"/>
+      <meta name="keywords" content="OCDS, EDCA, Honduras, ONCAE, Contrataciones, Abiertas"/>
+      <link rel="stylesheet" href="plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="plugins/fontawesome-free-5.8.2/css/all.min.css" >
+      <link rel="stylesheet" href="plugins/animate-3.7.0/animate.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" >
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
+         <a class="navbar-brand" href="index.html">
+         <img src="img/logos/portalEdca.png" style="max-height: 40px" alt="Logo Portal Edca">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="barraNavegacionPortal">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="visualizaciones.html">Visualizaciones</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="proveedores.html">Proveedores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="compradores.html">Compradores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="api.html">API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="descargas.html">Descargas</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container mb-5 tamanoMinimo">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="textoColorPrimario mt-3 tituloDetalleProceso pl-2 pr-2">Construcción de planta de tratamiento de efluentes matadero municipal y corral lorem</h1>
+            </div>
+         </div>
+         <div class="row mt-3 mb-3 contenedorElementosProceso">
+            <div class=" col-2 col-sm-1 col-md-10 offset-md-2 contenedorProceso1">
+               <div class=" contenedorPasosProceso mb-3">
+                  <div class="botonPasoProceso fondoColorPrimario" id="planificacionProceso" estado="planificacion" title="Planificación">
+                     <div class="circuloNumeroPasoProceso ">
+                        <span>1</span>
+                     </div>
+                     <div class="textoBotonPasoProceso"> <span>Planificación </span></div>
+                  </div>
+                  <div class="botonPasoProceso fondoColorPrimario activo"  id="convocatoriaProceso" estado="convocatoria" title="Convocatoria">
+                     <div class="circuloNumeroPasoProceso ">
+                        <span>2</span>
+                     </div>
+                     <div class="textoBotonPasoProceso"> <span>Convocatoria </span></div>
+                  </div>
+                  <div class="botonPasoProceso fondoColorPrimario deshabilitado"  id="adjudicacionProceso" estado="adjudicacion" title="Adjudicación">
+                     <div class="circuloNumeroPasoProceso ">
+                        <span>3</span>
+                     </div>
+                     <div class="textoBotonPasoProceso"> <span>Adjudicación</span></div>
+                  </div>
+                  <div class="botonPasoProceso fondoColorPrimario deshabilitado"  id="contratoProceso" estado="contrato" title="Contrato">
+                     <div class="circuloNumeroPasoProceso ">
+                        <span>4</span>
+                     </div>
+                     <div class="textoBotonPasoProceso"> <span>Contrato </span></div>
+                  </div>
+                  <div class="botonPasoProceso fondoColorPrimario deshabilitado"  id="implementacionProceso" estado="implementacion" title="Implementación">
+                     <div class="circuloNumeroPasoProceso ">
+                        <span>5</span>
+                     </div>
+                     <div class="textoBotonPasoProceso"> <span>Implementación</span></div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-2 col-lg-2 contenedorProceso2 mb-3">
+               <div class="botonPropiedadProceso activo" propiedad="informacion" title="Información">
+                  <img src="img/proceso/data.png" alt="Información">
+                  <div class="textoBotonPropiedadProceso">Información</div>
+               </div>
+               <div class="botonPropiedadProceso" propiedad="documentos" title="Documentos">
+                  <img src="img/proceso/documentos.png" alt="Documentos" >
+                  <div class="textoBotonPropiedadProceso">Documentos</div>
+               </div>
+               <div class="botonPropiedadProceso" propiedad="historial" title="Historial de Publicaciones">
+                  <img src="img/proceso/historial.png" alt="Historial de Publicaciones" >
+                  <div class="textoBotonPropiedadProceso">Historial de Publicaciones</div>
+               </div>
+               <div class="botonPropiedadProceso" propiedad="invitados" title="Invitados">
+                  <img src="img/proceso/invitados.png" alt="Invitados">
+                  <div class="textoBotonPropiedadProceso">Invitados</div>
+               </div>
+               <div class="botonPropiedadProceso" propiedad="solicitados" title="Items Solicitados">
+                  <img src="img/proceso/items.png" alt="Items Solicitados">
+                  <div class="textoBotonPropiedadProceso">Productos Solicitados</div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 convocatoria informacion pasoOcultar" id="convocatoriaInformacion">
+               <div class="row">
+                  <h4 class="col-6 col-sm-6 col-md-6">
+                     Datos de la Convocatoria
+                  </h4>
+                  <div class="col-6 col-sm-6 col-md-6 textoAlineadoDerecha">
+                     <h4 class="descargaIconos">
+                        <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span>
+                        <span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span>
+                     </h4>
+                  </div>
+               </div>
+               <div class=" cajonSombreado contenedorDetalleProcesoDatos">
+                  <div class="contenedorProceso informacionProceso">
+                     <div class="contenedorTablaCaracteristicas">
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    ocds-213czf-000-00001
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Comprador:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Alcaldia Municipal
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Unidad de Contratación:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Alcaldia Municipal
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Estado:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Convocatoria
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Tipo de Selección:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Concurso Público
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Categoría:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Obras
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Fecha de Publicación:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    2019-04-26
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="contenedorTablaCaracteristicas">
+                        <table class="anchoTotal">
+                           <tbody>
+                              <tr>
+                                 <td class="textoAlineadoDerecha">
+                                    <div class="montoTotalProceso pr-3">
+                                       <img src="img/otros/monedasHonduras.png" class="imagenMonto" alt="">
+                                       <div class="contenedorMonto procesoMonto">
+                                          <div class="textoColorGris">Monto Estimado</div>
+                                          <div class="valorMonto">
+                                             87,456.00 <span class="textoColorPrimario">HNL</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="row mt-5 mb-5">
+                  <div class="col-md-6">
+                     <h4 class="text-primary-edcax">Adjudicación y Contrato</h4>
+                     <div class=" cajonSombreado ">
+                        <div class="contenedorProceso informacionProceso">
+                           <div class="contenedorTablaCaracteristicas">
+                              <table>
+                                 <tbody>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Fuente de Financiamiento:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          Recursos Institucionales
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Anticipo:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          20%
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Vigencia de Contrato:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          Hasta Recepción Definitiva
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <h4 class="text-primary-edcax">Datos de Contacto</h4>
+                     <div class=" cajonSombreado ">
+                        <div class="contenedorProceso informacionProceso">
+                           <div class="contenedorTablaCaracteristicas">
+                              <table>
+                                 <tbody>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Nombre:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          Esteban Mendoza
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Cargo:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          Secretario AMDC
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Telefono:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          9999-9999
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="tituloTablaCaracteristicas">Correo Electrónico:</td>
+                                       <td class="contenidoTablaCaracteristicas"> 
+                                          esteban146161@gmail.com
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 convocatoria documentos pasoOcultar" id="convocatoriaDocumentos" style="display:none">
+               <div class="">
+                  <div class=" cajonSombreado ">
+                     <table class="tablaGeneral">
+                        <thead>
+                           <tr>
+                              <th>Tipo de Documento</th>
+                              <th>Fecha</th>
+                              <th>Nombre de Archivo</th>
+                              <th></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td data-label="Tipo de Documento">Anexos al Pliego </td>
+                              <td data-label="Fecha"> </td>
+                              <td data-label="Nombre de Archivo"><a href=" " class="enlaceTablaGeneral">	Lic144LPN-MP-DCE-EUROJUSTICIA-003-20191400-AnexosalPliego.pdf</a></td>
+                              <td data-label="textoAlineadoDerecha">
+                                 <h4 class="descargaIconos">
+                                    <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.PDF</span>
+                                 </h4>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 convocatoria historial pasoOcultar" id="convocatoriaHistorial" style="display:none">
+               <div class="">
+                  <div class=" cajonSombreado ">
+                     <table class="tablaGeneral">
+                        <thead>
+                           <tr>
+                              <th>Tipo de Documento</th>
+                              <th>Fecha</th>
+                              <th>Nombre de Archivo</th>
+                              <th></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td data-label="Tipo de Documento">Llamado publicadoAnexos al Pliego </td>
+                              <td data-label="Fecha">	07-05-2019 - 07:35:58 </td>
+                              <td data-label="Nombre de Archivo"><a href=" " class="enlaceTablaGeneral">llamado-publico-1557228958850.pdf</a></td>
+                              <td data-label="textoAlineadoDerecha">
+                                 <h4 class="descargaIconos">
+                                    <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.PDF</span>
+                                 </h4>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 convocatoria invitados pasoOcultar" id="convocatoriaInvitados" style="display:none">
+               <div>
+                  <div class=" cajonSombreado ">
+                     <table class="tablaGeneral">
+                        <thead>
+                           <tr>
+                              <th>Proveedor</th>
+                              <th>Identificación</th>
+                              <th>Telefono</th>
+                              <th>Correo</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td data-label="Proveedor"><a href="proveedor.html" class="enlaceTablaGeneral">	JOSE EDUARDO ATALA ZABLAH </a> </td>
+                              <td data-label="Identificación">RTN 0801204578945</td>
+                              <td data-label="Telefono">9999-9999</td>
+                              <td data-label="Correo">
+                                 esteban146161@gmail.com
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 convocatoria solicitados pasoOcultar" id="convocatoriaSolicitados" style="display:none">
+               <div class="">
+                  <div class=" cajonSombreado ">
+                     <table class="tablaGeneral">
+                        <thead>
+                           <tr>
+                              <th>UNSPSC</th>
+                              <th>Descripción</th>
+                              <th>Especificaciones</th>
+                              <th>Cantidad</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td data-label="UNSPSC">82121902</td>
+                              <td data-label="Descripción">Encuadernación espiral</td>
+                              <td data-label="Especificaciones">(cuadernos con logo) Ver pliego</td>
+                              <td data-label="Cantidada">
+                                 1
+                              </td>
+                           </tr>
+                           <tr>
+                              <td data-label="UNSPSC">82121702</td>
+                              <td data-label="Descripción">Servicios de copias a color o de cotejo</td>
+                              <td data-label="Especificaciones">Trifolios varios (ver pliego)</td>
+                              <td data-label="Cantidada">
+                                 2
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 planificacion informacion pasoOcultar" id="planificacionInformacion" style="display:none">
+               <div class="row">
+                  <h4 class="col-6 col-sm-6 col-md-6">
+                     Datos de la Licitación
+                  </h4>
+                  <div class="col-6 col-sm-6 col-md-6 textoAlineadoDerecha">
+                     <h4 class="descargaIconos">
+                        <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span>
+                        <span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span>
+                     </h4>
+                  </div>
+               </div>
+               <div class=" cajonSombreado contenedorDetalleProcesoDatos">
+                  <div class="contenedorProceso informacionProceso">
+                     <div class="contenedorTablaCaracteristicas">
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    ocds-213czf-000-00001
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Comprador:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Alcaldia Municipal
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Tipo de Selección:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Concurso Público
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Categoría:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    Obras
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="tituloTablaCaracteristicas">Fecha de Publicación:</td>
+                                 <td class="contenidoTablaCaracteristicas"> 
+                                    2019-04-26
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="contenedorTablaCaracteristicas">
+                        <table class="anchoTotal">
+                           <tbody>
+                              <tr>
+                                 <td class="textoAlineadoDerecha">
+                                    <div class="montoTotalProceso pr-3">
+                                       <img src="img/otros/monedasHonduras.png" class="imagenMonto" alt="">
+                                       <div class="contenedorMonto procesoMonto">
+                                          <div class="textoColorGris">Monto Estimado</div>
+                                          <div class="valorMonto">
+                                             87,456.00 <span class="textoColorPrimario">HNL</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 planificacion documentos pasoOcultar" id="planificacionDocumentos" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 planificacion historial pasoOcultar" id="planificacionHistorial" style="display:none">
+               <div class="">
+                  <div class=" cajonSombreado ">
+                     <table class="tablaGeneral">
+                        <thead>
+                           <tr>
+                              <th>Tipo de Documento</th>
+                              <th>Fecha</th>
+                              <th>Nombre de Archivo</th>
+                              <th></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td data-label="Tipo de Documento">Construccion de sistemas de fontaneria </td>
+                              <td data-label="Fecha">	07-05-2019 - 07:35:58 </td>
+                              <td data-label="Nombre de Archivo"><a href=" " class="enlaceTablaGeneral">fontaneria-1557228958850.pdf</a></td>
+                              <td data-label="textoAlineadoDerecha">
+                                 <h4 class="descargaIconos">
+                                    <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.PDF</span>
+                                 </h4>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 planificacion invitados pasoOcultar" id="planificacionInvitados" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 planificacion solicitados pasoOcultar" id="planificacionSolicitados" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 adjudicacion informacion pasoOcultar" id="adjudicacionInformacion" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 adjudicacion documentos pasoOcultar" id="adjudicacionDocumentos" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 adjudicacion historial pasoOcultar" id="adjudicacionHistorial" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 adjudicacion invitados pasoOcultar" id="adjudicacionInvitados" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 adjudicacion solicitados pasoOcultar" id="adjudicacionSolicitados" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 contrato informacion pasoOcultar" id="contratoInformacion" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 contrato documentos pasoOcultar" id="contratoDocumentos" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 contrato historial pasoOcultar" id="contratoHistorial" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 contrato invitados pasoOcultar" id="contratoInvitados" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 contrato solicitados pasoOcultar" id="contratoSolicitados" style="display:none">
+            </div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 implementacion informacion pasoOcultar" id="implementacionInformacion" style="display:none"></div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 implementacion documentos pasoOcultar" id="implementacionDocumentos" style="display:none"></div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 implementacion historial pasoOcultar" id="implementacionHistorial" style="display:none"></div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 implementacion invitadoss pasoOcultar" id="implementacionInvitados" style="display:none"></div>
+            <div class="col-10 col-sm-11 col-md-10 col-lg-10 contenedorProceso3 implementacion solicitados pasoOcultar" id="implementacionSolicitados" style="display:none"></div>
+         </div>
+      </div>
+      <!-- PIE DE PAGINA -->
+      <footer class="page-footer font-small fondoColorGrisOscuroClaro pt-4">
+         <div class="container-fluid text-center text-md-left">
+            <div class="row">
+               <div class="col-md-3 mt-md-0 mt-3">
+                  <a href="https://www.presidencia.gob.hn/"><img src="img/footer/logorepublica.png" class="imagenFooterPrincipal" alt="Logo Presidencia de la República"></a>
+               </div>
+               <div class="col-md-3 mt-md-0 mt-3">
+                  <h5 class="text-uppercase textoColorBlanco">Portal EDCA </h5>
+                  <p class="textoColorBlanco textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
+               </div>
+               <hr class="clearfix w-100 d-md-none pb-3">
+               <div class="col-md-3 mb-md-0 mb-3">
+                  <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
+                  <ul class="list-unstyled textoColorBlanco">
+                     <li>
+                        <a href="http://www.oncae.gob.hn/">ONCAE</a>
+                     </li>
+                     <li>
+                        <a href="http://www.oncae.gob.hn/">SEFIN</a>
+                     </li>
+                     <li>
+                        <a href="https://sisocs.org/">SISOCS</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-3 mb-md-0 mb-3">
+                  <h5 class="text-uppercase textoColorBlanco"></h5>
+                  <ul class="list-unstyled textoColorBlanco">
+                     <li>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright text-center py-3 textoColorBlanco fondoColorGrisOscuro">Oficina Normativa de Contratación y Adquisiciones del Estado
+            <a href="" class="textoColorBlanco"> ONCAE</a>
+         </div>
+      </footer>
+      <!-- CIERRE DE PIE DE PAGINA -->
+      <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+      <script src="plugins/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+      <script src="plugins/countto/jquery.countTo.js"></script>
+      <script src="plugins/popper-1.15.0/popper.min.js"></script>
+      <script src="plugins/tippy-4.3.1/index.all.min.js"></script>
+      <script>
+         /*Onload de la Página*/
+         $(function(){
+           /*Añadir evento click a los pasos del proceso de contratación para mostrar el div de su contenido*/
+           $('.botonPasoProceso').on('click',function(e){
+             if(!$(e.currentTarget).hasClass('deshabilitado')){
+               $('.botonPasoProceso').removeClass('activo');
+               $(e.currentTarget).addClass('activo');
+               $('.pasoOcultar').hide();
+               $(`.${$(e.currentTarget).attr('estado')}.informacion`).show();
+               
+         
+               if($(`.${$(e.currentTarget).attr('estado')}.documentos`).html().trim()){
+                 $(`.botonPropiedadProceso[propiedad="documentos"]`).show()
+               }else{
+                 $(`.botonPropiedadProceso[propiedad="documentos"]`).hide()
+               }
+         
+               if($(`.${$(e.currentTarget).attr('estado')}.historial`).html().trim()){
+                 $(`.botonPropiedadProceso[propiedad="historial"]`).show()
+               }else{
+                 $(`.botonPropiedadProceso[propiedad="historial"]`).hide()
+               }
+         
+               if($(`.${$(e.currentTarget).attr('estado')}.invitados`).html().trim()){
+                 $(`.botonPropiedadProceso[propiedad="invitados"]`).show()
+               }else{
+                 $(`.botonPropiedadProceso[propiedad="invitados"]`).hide()
+               }
+         
+               if($(`.${$(e.currentTarget).attr('estado')}.solicitados`).html().trim()){
+                 $(`.botonPropiedadProceso[propiedad="solicitados"]`).show()
+               }else{
+                 $(`.botonPropiedadProceso[propiedad="solicitados"]`).hide()
+               }
+         
+               if($(`.${$(e.currentTarget).attr('estado')}.informacion`).html().trim()){
+                 $(`.botonPropiedadProceso[propiedad="informacion"]`).show()
+               }else{
+                 $(`.botonPropiedadProceso[propiedad="informacion"]`).hide()
+               }
+               
+               $(`.${$(e.currentTarget).attr('estado')}.informacion`).show();
+             }
+           })
+           /*Añadir evento click a los atributos del proceso de contratación para mostrar el div de su contenido*/
+           $('.botonPropiedadProceso').on('click',function(e){
+             $('.botonPropiedadProceso').removeClass('activo');
+             if(!$(e.currentTarget).hasClass('deshabilitado')){
+               $('.pasoOcultar').hide();
+               $(e.currentTarget).addClass('activo');
+               $(`.${$(e.currentTarget).attr('propiedad')}.${$('.botonPasoProceso.activo').attr('estado')}`).show();
+             }
+           });
+           tippy('.botonPropiedadProceso[propiedad="informacion"] ', {
+           arrow: true,
+           arrowType: 'round',
+           content:'Información',
+           placement:'bottom-end'
+           });
+         
+           tippy('.botonPropiedadProceso[propiedad="documentos"] ', {
+           arrow: true,
+           arrowType: 'round',
+           content:'Documentos',
+           placement:'bottom-end'
+           });
+         
+           tippy('.botonPropiedadProceso[propiedad="historial"] ', {
+           arrow: true,
+           arrowType: 'round',
+           content:'Historial',
+           placement:'bottom-end'
+           });
+         
+           tippy('.botonPropiedadProceso[propiedad="invitados"] ', {
+           arrow: true,
+           arrowType: 'round',
+           content:'Invitados',
+           placement:'bottom-end'
+           });
+         
+           tippy('.botonPropiedadProceso[propiedad="solicitados"] ', {
+           arrow: true,
+           arrowType: 'round',
+           content:'Items Solicitados',
+           placement:'bottom-end'
+           });
+           
+         });
+         
+      </script>
+   </body>
+</html>

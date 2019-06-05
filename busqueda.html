@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portal EDCA - Busqueda</title>
+      <meta name="description" content="Portal del Estandar de Datos de Contrataciones Abiertas en Honduras"/>
+      <meta name="keywords" content="OCDS, EDCA, Honduras, ONCAE, Contrataciones, Abiertas"/>
+      <link rel="stylesheet" href="plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="plugins/fontawesome-free-5.8.2/css/all.min.css" >
+      <link rel="stylesheet" href="plugins/animate-3.7.0/animate.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" >
+      <link rel="stylesheet" href="plugins/elastic-list/style.css" >
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
+         <a class="navbar-brand" href="index.html">
+         <img src="img/logos/portalEdca.png" style="max-height: 40px" alt="Logo Portal Edca">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="barraNavegacionPortal">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="visualizaciones.html">Visualizaciones</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="proveedores.html">Proveedores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="compradores.html">Compradores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="api.html">API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="descargas.html">Descargas</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container  busquedaEspaciadoHorizontal">
+         <div class="contenedorFiltrosBusqueda animated">
+            <h4 class="textoColorPrimario tituloFiltrosMenu">
+               Filtros 
+               <div class="cursorMano cerrarContenedorFiltrosBusqueda" style="display:none"><i class="fas fa-times textoColorGris"></i></div>
+            </h4>
+            <div class="filtrosContenedoFiltrosBusqueda">
+               <!--<div class="filtroBusquedaPagina">
+                  <div class="tituloFiltroBusquedaPagina">
+                    Moneda
+                  </div>
+                  <div class="opcionesFiltroBusquedaPagina">
+                    <div class="opcionFiltroBusquedaPagina" value="HNL">
+                     <i class="fas"></i>
+                     <span>HNL (30)</span>
+                    </div>
+                    <div class="opcionFiltroBusquedaPagina" value="USD">
+                     <i class="fas"></i>
+                     <span>USD (15)</span>  
+                    </div>
+                  </div>
+                  </div>
+                  <div class="filtroBusquedaPagina">
+                  <div class="tituloFiltroBusquedaPagina">
+                   Comprador
+                  </div>
+                  <div class="opcionesFiltroBusquedaPagina">
+                   <div class="opcionFiltroBusquedaPagina" value="HNL">
+                    <i class="fas"></i>
+                    <span>AMDC</span>  
+                   </div>
+                   <div class="opcionFiltroBusquedaPagina" value="USD">
+                    <i class="fas"></i>
+                    <span>INE</span> 
+                   </div>
+                  </div>
+                  </div>
+                  
+                  <div class="filtroBusquedaPagina">
+                  <div class="tituloFiltroBusquedaPagina">
+                   Categoría
+                  </div>
+                  <div class="opcionesFiltroBusquedaPagina">
+                   <div class="opcionFiltroBusquedaPagina" value="HNL">
+                    <i class="fas"></i>
+                    <span>Obras</span>   
+                   </div>
+                   <div class="opcionFiltroBusquedaPagina" value="USD">
+                    <i class="fas"></i>
+                    <span>Bienes</span>  
+                   </div>
+                   <div class="opcionFiltroBusquedaPagina" value="USD">
+                     <i class="fas"></i>
+                     <span>Servicios</span>  
+                    </div>
+                  </div>
+                  </div>
+                  <div class="filtroBusquedaPagina">
+                  <div class="tituloFiltroBusquedaPagina">
+                   Selección
+                  </div>
+                  <div class="opcionesFiltroBusquedaPagina">
+                   <div class="opcionFiltroBusquedaPagina" value="HNL">
+                    <i class="fas"></i>
+                    <span>Compras Menores</span> 
+                   </div>
+                   <div class="opcionFiltroBusquedaPagina" value="USD">
+                    <i class="fas"></i>
+                    <span>Concurso Privado</span>   
+                   </div>
+                   <div class="opcionFiltroBusquedaPagina" value="USD">
+                     <i class="fas"></i>
+                     <span>Concurso Público Nacional</span>  
+                    </div>
+                    <div class="opcionFiltroBusquedaPagina" value="USD">
+                     <i class="fas"></i>
+                     <span>Concurso Público Internacional</span>    
+                    </div>
+                  </div>
+                  </div>-->
+               <div id="elastic-list">
+               </div>
+            </div>
+         </div>
+         <div class="contenedorResultadosBusqueda">
+            <div class="container-fluid">
+               <div class="row mt-3 mb-3">
+                  <div class="campoAzulBusquedaPadre" >
+                     <input class="form-control form-control-lg campoAzulBusqueda" id="campoBusquedaProceso" type="text" placeholder="Busca una contratación..." title="Busca una contratación...">
+                     <i class="fas fa-search cursorMano" id="botonBusquedaProceso"></i>	
+                  </div>
+                  <div class="contenedorBotonAzulFiltroBusqueda"  style="display:none">
+                     <button class="botonAzulFiltroBusqueda" title="Filtros">
+                     <i class="fas fa-filter"></i> 
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="contenedorFiltros">
+                     <div class="row">
+                        <div class="col-6 col-sm-7 col-md-6">
+                           <div class="tituloFiltrosAplicados">Filtros Aplicados:</div>
+                        </div>
+                        <div class="col-6 col-sm-5 col-md-6 textoAlineadoDerecha">
+                           <a href="javascript:void(0)" class="botonGeneral fondoColorSecundario">Quitar Todos</a>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="grupoEtiquetaFiltro col-md-12 mb-1">
+                           <div class="grupoEtiquetaTitulo">
+                              Moneda:
+                           </div>
+                           <div class="filtrosAplicados">
+                              <div class="etiquetaFiltro">
+                                 USD
+                                 <i class="fas fa-times"></i>
+                              </div>
+                              <div class="etiquetaFiltro">
+                                 HNL
+                                 <i class="fas fa-times"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="grupoEtiquetaFiltro col-md-12 mb-1">
+                           <div class="grupoEtiquetaTitulo">
+                              Seleccion:
+                           </div>
+                           <div class="filtrosAplicados">
+                              <div class="etiquetaFiltro">
+                                 Concurso Público Nacional
+                                 <i class="fas fa-times"></i>
+                              </div>
+                              <div class="etiquetaFiltro">
+                                 Compras Menores
+                                 <i class="fas fa-times"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="grupoEtiquetaFiltro col-md-12 mb-1">
+                           <div class="grupoEtiquetaTitulo">
+                              Categoria:
+                           </div>
+                           <div class="filtrosAplicados">
+                              <div class="etiquetaFiltro">
+                                 Obras
+                                 <i class="fas fa-times"></i>
+                              </div>
+                              <div class="etiquetaFiltro">
+                                 Bienes
+                                 <i class="fas fa-times"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container-fluid mt-3">
+               <div class="row">
+                  <div class="informacionResultadosBusqueda">
+                     <div class="row elementosResultadosResumen">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                           <table>
+                              <tbody>
+                                 <tr >
+                                    <td class="tituloTablaCaracteristicas pb-1">Total de Procesos:</td>
+                                    <td class="contenidoTablaCaracteristicas pb-1"> 
+                                       <span class="botonGeneral fondoColorPrimario" >45</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas pb-1">Promedio de Monto:</td>
+                                    <td class="contenidoTablaCaracteristicas pb-1"> 
+                                       <span class="botonGeneral fondoColorPrimario" >45,5666,545 HNL</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                           <table>
+                              <tbody>
+                                 <tr >
+                                    <td class="tituloTablaCaracteristicas pb-1">Total de Compradores:</td>
+                                    <td class="contenidoTablaCaracteristicas pb-1"> 
+                                       <span class="botonGeneral fondoColorPrimario" >45</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas pb-1"> Total de Proveedores:</td>
+                                    <td class="contenidoTablaCaracteristicas pb-1"> 
+                                       <span class="botonGeneral fondoColorPrimario ">78</span>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container-fluid contenedorBusqueda pt-3 mb-5" >
+               <div class="row">
+                  <div class="col-6 col-sm-6 col-md-6">
+                     <h4 class="textoColorPrimario">Resultados</h4>
+                  </div>
+                  <div class="col-6 col-sm-6 col-md-6 textoAlineadoDerecha">
+                     <h4 class="descargaIconos "><span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span><span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span></h4>
+                  </div>
+                  <div class="resultadoBusquedaProceso cursorMano transicion">
+                     <div class="title-result">
+                        <div class="textoTituloResultadoBusqueda">
+                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. m <span class="textoColorGris textoAlineadoDerecha">2018-02-19 10:02:54</span>
+                        </div>
+                     </div>
+                     <div class="contenedorProceso">
+                        <div class="contenedorTablaCaracteristicas">
+                           <table>
+                              <tbody>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       ocds-213czf-000-00001
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Comprador:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Alcaldia Municipal
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Estado:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Adjudicación
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="contenedorTablaCaracteristicas">
+                           <table class="anchoTotal">
+                              <tbody>
+                                 <tr>
+                                    <td class="textoAlineadoDerecha">
+                                       <div class="montoTotalProceso">
+                                          <img src="img/otros/moneda.png" alt="" >
+                                          <div class="contenedorMonto">
+                                             <div class="textoColorGris">Monto Estimado:</div>
+                                             <div class="valorMonto">
+                                                87,456.00 <span class="textoColorPrimario">HNL</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="resultadoBusquedaProceso cursorMano transicion">
+                     <div class="title-result">
+                        <div class="textoTituloResultadoBusqueda">
+                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. m <span class="textoColorGris textoAlineadoDerecha">2018-02-19 10:02:54</span>
+                        </div>
+                     </div>
+                     <div class="contenedorProceso">
+                        <div class="contenedorTablaCaracteristicas">
+                           <table>
+                              <tbody>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       ocds-213czf-000-00001
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Comprador:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Alcaldia Municipal
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Estado:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Adjudicación
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="contenedorTablaCaracteristicas">
+                           <table class="anchoTotal">
+                              <tbody>
+                                 <tr>
+                                    <td class="textoAlineadoDerecha">
+                                       <div class="montoTotalProceso">
+                                          <img src="img/otros/moneda.png" alt="" >
+                                          <div class="contenedorMonto">
+                                             <div class="textoColorGris">Monto Estimado:</div>
+                                             <div class="valorMonto">
+                                                87,456.00 <span class="textoColorPrimario">HNL</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="resultadoBusquedaProceso cursorMano transicion">
+                     <div class="title-result">
+                        <div class="textoTituloResultadoBusqueda">
+                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. m <span class="textoColorGris textoAlineadoDerecha">2018-02-19 10:02:54</span>
+                        </div>
+                     </div>
+                     <div class="contenedorProceso">
+                        <div class="contenedorTablaCaracteristicas">
+                           <table>
+                              <tbody>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       ocds-213czf-000-00001
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Comprador:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Alcaldia Municipal
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Estado:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Adjudicación
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="contenedorTablaCaracteristicas">
+                           <table class="anchoTotal">
+                              <tbody>
+                                 <tr>
+                                    <td class="textoAlineadoDerecha">
+                                       <div class="montoTotalProceso">
+                                          <img src="img/otros/moneda.png" alt="" >
+                                          <div class="contenedorMonto">
+                                             <div class="textoColorGris">Monto Estimado:</div>
+                                             <div class="valorMonto">
+                                                87,456.00 <span class="textoColorPrimario">HNL</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="resultadoBusquedaProceso cursorMano transicion">
+                     <div class="title-result">
+                        <div class="textoTituloResultadoBusqueda">
+                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. m <span class="textoColorGris textoAlineadoDerecha">2018-02-19 10:02:54</span>
+                        </div>
+                     </div>
+                     <div class="contenedorProceso">
+                        <div class="contenedorTablaCaracteristicas">
+                           <table>
+                              <tbody>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       ocds-213czf-000-00001
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Comprador:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Alcaldia Municipal
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tituloTablaCaracteristicas">Estado:</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       Adjudicación
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="contenedorTablaCaracteristicas">
+                           <table class="anchoTotal">
+                              <tbody>
+                                 <tr>
+                                    <td class="textoAlineadoDerecha">
+                                       <div class="montoTotalProceso">
+                                          <img src="img/otros/moneda.png" alt="" >
+                                          <div class="contenedorMonto">
+                                             <div class="textoColorGris">Monto Estimado:</div>
+                                             <div class="valorMonto">
+                                                87,456.00 <span class="textoColorPrimario">HNL</span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12 textoAlineadoCentrado">
+                     <nav class="navegacionTablaGeneral">
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-left"></i></span></a>
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1</span></a>
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral  numeroNormalNavegacionTablaGeneral"><span>...</span></a>
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1410</span></a>
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1411</span></a>
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral current"><span>1412</span></a>
+                        <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1413</span></a><a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-right"></i></span></a>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- PIE DE PAGINA -->
+      <footer class="page-footer font-small fondoColorGrisOscuroClaro pt-4">
+         <div class="container-fluid text-center text-md-left">
+            <div class="row">
+               <div class="col-md-3 mt-md-0 mt-3">
+                  <a href="https://www.presidencia.gob.hn/"><img src="img/footer/logorepublica.png" class="imagenFooterPrincipal" alt="Logo Presidencia de la República"></a>
+               </div>
+               <div class="col-md-3 mt-md-0 mt-3">
+                  <h5 class="text-uppercase textoColorBlanco">Portal EDCA </h5>
+                  <p class="textoColorBlanco textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
+               </div>
+               <hr class="clearfix w-100 d-md-none pb-3">
+               <div class="col-md-3 mb-md-0 mb-3">
+                  <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
+                  <ul class="list-unstyled textoColorBlanco">
+                     <li>
+                        <a href="http://www.oncae.gob.hn/">ONCAE</a>
+                     </li>
+                     <li>
+                        <a href="http://www.oncae.gob.hn/">SEFIN</a>
+                     </li>
+                     <li>
+                        <a href="https://sisocs.org/">SISOCS</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-3 mb-md-0 mb-3">
+                  <h5 class="text-uppercase textoColorBlanco"></h5>
+                  <ul class="list-unstyled textoColorBlanco">
+                     <li>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-copyright text-center py-3 textoColorBlanco fondoColorGrisOscuro">Oficina Normativa de Contratación y Adquisiciones del Estado
+            <a href="" class="textoColorBlanco"> ONCAE</a>
+         </div>
+      </footer>
+      <!-- CIERRE DE PIE DE PAGINA -->
+      <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+      <script src="plugins/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+      <script src="plugins/countto/jquery.countTo.js"></script>
+      <script src="plugins/elastic-list/data.js"></script>
+      <script src="plugins/elastic-list/elastic-list.js"></script>
+      <script src="plugins/popper-1.15.0/popper.min.js"></script>
+      <script src="plugins/tippy-4.3.1/index.all.min.js"></script>
+      <script>
+         $('.opcionFiltroBusquedaPagina').on('click',function(e){
+           if($(e.currentTarget).hasClass('activo')){
+             $(e.currentTarget).removeClass('activo');
+           }else{
+             $(e.currentTarget).addClass('activo');
+           }
+         });
+         $('.botonAzulFiltroBusqueda,.cerrarContenedorFiltrosBusqueda').on('click',function(e){
+           if($('.contenedorFiltrosBusqueda').hasClass('cerrado')){
+             $('.contenedorFiltrosBusqueda').removeClass('cerrado');
+           }else{
+             $('.contenedorFiltrosBusqueda').addClass('cerrado');
+           }
+         });
+         tippy('#campoBusquedaProceso', {
+             arrow: true,
+             arrowType: 'round',
+             content:'Ingresa un texto a buscar',
+             placement: 'bottom'
+           });
+           tippy('#botonBusquedaProceso', {
+             arrow: true,
+             arrowType: 'round',
+             content:'Haz click para buscar'
+           });
+         $('.etiquetaFiltro i').on('click',function(e){
+           $(e.currentTarget).parent().remove();
+         });
+         
+         
+         $('.resultadoBusquedaProceso').on('click',function(e){
+           window.location.href="proceso.html";
+         });
+         
+         $(function () {
+           view = new ElasticList({
+               el: $("#elastic-list"),
+               data: dataElastic,
+               hasFilter: true,
+               onchange: function (filters) {
+                   console.info(filters);
+               },
+               columns: [
+                   {
+                     title: "Selección",
+                       attr: "selection"
+                   },{
+                       title: "Categoría",
+                       attr: "category"
+                   },
+                   {
+                       title: "Institución",
+                       attr: "name"
+                   }, {
+                       title: "Año",
+                       attr: "year"
+                   },{
+                     title: "Moneda",
+                       attr: "coin"
+                   } ]
+           });
+         });
+      </script>
+   </body>
+</html>
