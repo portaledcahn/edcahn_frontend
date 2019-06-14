@@ -3,46 +3,50 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Portal EDCA - Compradores</title>
+      <title>Portal de Contrataciones Abiertas de Honduras - Compradores</title>
       <meta name="description" content="Portal del Estandar de Datos de Contrataciones Abiertas en Honduras"/>
       <meta name="keywords" content="OCDS, EDCA, Honduras, ONCAE, Contrataciones, Abiertas"/>
       <link rel="stylesheet" href="plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="plugins/jquery-ui-1.12.1/jquery-ui.min.css">
       <link rel="stylesheet" href="css/estilo.css">
       <link rel="stylesheet" href="plugins/fontawesome-free-5.8.2/css/all.min.css" >
       <link rel="stylesheet" href="plugins/animate-3.7.0/animate.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" >
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
-         <a class="navbar-brand" href="index.html">
-         <img src="img/logos/portalEdca.png" style="max-height: 40px" alt="Logo Portal Edca">
-         </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="barraNavegacionPortal">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-               <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="visualizaciones.html">Visualizaciones</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="proveedores.html">Proveedores</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="compradores.html">Compradores</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="api.html">API</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="descargas.html">Descargas</a>
-               </li>
-            </ul>
-         </div>
-      </nav>
+         <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
+               <a class="navbar-brand" href="index.html">
+               <img src="img/logos/logoPortalEdca.svg" alt="Logo Portal de Contrataciones Abiertas de Honduras">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="barraNavegacionPortal">
+                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="visualizaciones.html">Visualizaciones</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="proveedores.html">Proveedores</a>
+                     </li>
+                     <li class="nav-item active">
+                        <a class="nav-link transicion" href="compradores.html">Compradores</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="api.html">API</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="descargas.html">Descargas</a>
+                     </li>
+                     <li class="nav-item">
+                          <a class="nav-link transicion" href="acerca.html">Acerca</a>
+                       </li>
+                  </ul>
+               </div>
+            </nav>
       <div class="container">
          <div class="row">
             <div class="col-md-12">
@@ -53,14 +57,17 @@
             <div class="col-lg-6">
                <div class="campoAzulBusquedaPadre normal" style="margin-left:0">
                   <input class="form-control form-control-lg campoAzulBusqueda" type="text" placeholder="Busca un Comprador...">
-                  <i class="fas fa-search"></i>	
+                  <i class="fas fa-search cursorMano" id="buscarInformacion"></i>	
                </div>
             </div>
-            <div class="col-lg-6">
-               <h4 class="textoAlineadoDerecha mb-0 mt-3 descargaIconos">
-                  <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span>
-                  <span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span>
-               </h4>
+            <div class="col-lg-6 textoAlineadoDerecha">
+                  <h5 class="tituloTablaGeneral textoColorTitulo mt-3 mb-0 enLinea">Mostrar&nbsp;</h5>
+                  <select name="" id="" class="campoSeleccion ancho70 mt-3 enLinea">
+                     <option value="5">5</option>
+                     <option value="10">10</option>
+                     <option value="20">20</option>
+                  </select>
+                  <h5 class="tituloTablaGeneral textoColorTitulo mt-3 mb-0 enLinea">&nbsp;Resultados</h5>
             </div>
          </div>
          <div class="row">
@@ -69,12 +76,94 @@
                   <table class="tablaGeneral">
                      <thead>
                         <tr>
-                           <th>Comprador</th>
-                           <th>Procesos</th>
-                           <th>Total </th>
-                           <th>Promedio </th>
-                           <th>Mayor </th>
-                           <th>Menor</th>
+                           <th class="textoAlineadoCentrado">
+                              <span>Comprador</span>
+                              <input list="compradoresLista" id="proveedoresColumna" class="campoBlancoTextoSeleccion" placeholder="Nombre">
+                                 <datalist id="compradoresLista">
+                                   <option value="Conade">
+                                   <option value="BCH">
+                                   <option value="UPNFM">
+                                   <option value="Copeco">
+                                   <option value="Pani">
+                                   <option value="CNA">
+                                   <option value="Ministerio Publico">
+                                   <option value="Alcaldia Municipal de Danli">
+                                 </datalist>
+                           </th>
+                           <th class="textoAlineadoCentrado">
+                              <span>Procesos</span>
+                              <input list="procesosLista" id="proveedoresColumna" class="campoBlancoTextoSeleccion" placeholder="Número">
+                              <datalist id="procesosLista">
+                                    <option value="45">
+                                          <option value="75">
+                                          <option value="57575">
+                                          <option value="2">
+                                          <option value="75">
+                                          <option value="8669">
+                                          <option value="2878">
+                                          <option value="78738">
+                              </datalist>
+                           </th>
+                           <th class="textoAlineadoCentrado">
+                              <span>Total</span>
+                              <input list="totalLista" id="proveedoresColumna" class="campoBlancoTextoSeleccion" placeholder="Número">
+                              <datalist id="totalLista">
+                                    <option value="45">
+                                          <option value="75">
+                                          <option value="57575">
+                                          <option value="2">
+                                          <option value="75">
+                                          <option value="8669">
+                                          <option value="2878">
+                                          <option value="78738">
+                              </datalist>
+                            </th>
+                           <th class="textoAlineadoCentrado">
+                              <span>Promedio</span>
+                              <input list="promedioLista" id="proveedoresColumna" class="campoBlancoTextoSeleccion" placeholder="Número">
+                              <datalist id="promedioLista">
+                                    <option value="45">
+                                          <option value="75">
+                                          <option value="57575">
+                                          <option value="2">
+                                          <option value="75">
+                                          <option value="8669">
+                                          <option value="2878">
+                                          <option value="78738">
+                              </datalist>
+                           </th>
+                           <th class="textoAlineadoCentrado">
+                              <span>Mayor</span>
+                              <input list="mayorLista" id="proveedoresColumna" class="campoBlancoTextoSeleccion" placeholder="Número">
+                              <datalist id="mayorLista">
+                                    <option value="45">
+                                    <option value="75">
+                                    <option value="57575">
+                                    <option value="2">
+                                    <option value="75">
+                                    <option value="8669">
+                                    <option value="2878">
+                                    <option value="78738">
+                              </datalist>
+                            </th>
+                           <th class="textoAlineadoCentrado">
+                              <span>Menor</span>
+                              <input list="menorLista" id="proveedoresColumna" class="campoBlancoTextoSeleccion" placeholder="Número">
+                              <datalist id="menorLista">
+                                <option value="45">
+                                <option value="75">
+                                <option value="57575">
+                                <option value="2">
+                                <option value="75">
+                                <option value="8669">
+                                <option value="2878">
+                                <option value="78738">
+                              </datalist>
+                           </th>
+                           <th class="textoAlineadoCentrado">
+                                 <span>Última Licitación</span>
+                                 <input type="text" id="licitacionColumna" class="campoBlancoTextoSeleccion fecha" placeholder="Fecha">
+                              </th>
                         </tr>
                      </thead>
                      <tbody>
@@ -85,6 +174,7 @@
                            <td data-label="Promedio">155,099 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor" >87,000,000 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">0 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">BCH</a></td>
@@ -93,6 +183,7 @@
                            <td data-label="Promedio">2,314,241 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">79,823,428 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">11,657 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">UPNFM</a></td>
@@ -101,6 +192,7 @@
                            <td data-label="Promedio">570,480 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">25,000 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">102 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">Copeco</a></td>
@@ -109,6 +201,7 @@
                            <td data-label="Promedio">573,886 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">30,000,000 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">0 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">Pani</a></td>
@@ -117,7 +210,9 @@
                            <td data-label="Promedio">493,683 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">8,719,052 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">0 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
+                        <!--
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">CNA</a></td>
                            <td data-label="Procesos">8</td>
@@ -125,6 +220,7 @@
                            <td data-label="Promedio">186,817,098 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">1,418,364,000 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">0 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">Ministerio Publico</a></td>
@@ -133,6 +229,7 @@
                            <td data-label="Promedio">725,305 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">32,168,257 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">0 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
                         <tr>
                            <td data-label="Comprador"><a href="comprador.html" class="enlaceTablaGeneral">Alcaldia Municipal de Danli</a></td>
@@ -141,75 +238,148 @@
                            <td data-label="Promedio">570,480 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Mayor">13,247,091 <span class="textoColorPrimario">HNL</span></td>
                            <td data-label="Menor">0 <span class="textoColorPrimario">HNL</span></td>
+                           <td data-label="Última Licitación" class="textoAlineadoDerecha">2018-02-19 10:02:54</td>
                         </tr>
+                     -->
                      </tbody>
                   </table>
                </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-6">
                <h5 class="tituloTablaGeneral textoColorPrimario mt-3 mb-0" >Mostrando 0 a 4 de 4 Compradores</h5>
+            </div>
+            <div class="col-md-6 textoAlineadoDerecha">
+                  <h4 class="textoAlineadoDerecha mb-0 descargaIconos enLinea alineadoArriba" style="margin-top:18px">
+                        <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span>
+                        <span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span>
+                     </h4>
+                     <h4 class="enLinea mb-0 mt-3 enLinea alineadoArriba" onclick="location.href='preguntas.html'">
+                        <div class="textoAlineadoCentrado cursorMano botonAyuda transicion" id="informacionTipoDatos" >
+                              <i class="fas fa-question"></i>
+                           </div>
+                           
+                     </h4>
+               
             </div>
             <div class="col-md-12 textoAlineadoCentrado">
                <nav class="navegacionTablaGeneral">
                   <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-left"></i></span></a>
                   <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1</span></a>
                   <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral  numeroNormalNavegacionTablaGeneral"><span>...</span></a>
-                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1410</span></a>
-                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1411</span></a>
-                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral current"><span>1412</span></a>
-                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>1413</span></a><a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-right"></i></span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>10</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>11</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral current"><span>12</span></a>
+                  <a href="javascript:void(0);" class="numerosNavegacionTablaGeneral "><span>13</span></a><a href="javascript:void(0);" class="numerosNavegacionTablaGeneral"><span><i class="fa fa-angle-right"></i></span></a>
                </nav>
             </div>
          </div>
       </div>
       <!-- PIE DE PAGINA -->
-      <footer class="page-footer font-small fondoColorGrisOscuroClaro pt-4">
-         <div class="container-fluid text-center text-md-left">
-            <div class="row">
-               <div class="col-md-3 mt-md-0 mt-3">
-                  <a href="https://www.presidencia.gob.hn/"><img src="img/footer/logorepublica.png" class="imagenFooterPrincipal" alt="Logo Presidencia de la República"></a>
-               </div>
-               <div class="col-md-3 mt-md-0 mt-3">
-                  <h5 class="text-uppercase textoColorBlanco">Portal EDCA </h5>
-                  <p class="textoColorBlanco textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
-               </div>
-               <hr class="clearfix w-100 d-md-none pb-3">
-               <div class="col-md-3 mb-md-0 mb-3">
-                  <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
-                  <ul class="list-unstyled textoColorBlanco">
-                     <li>
-                        <a href="http://www.oncae.gob.hn/">ONCAE</a>
-                     </li>
-                     <li>
-                        <a href="http://www.oncae.gob.hn/">SEFIN</a>
-                     </li>
-                     <li>
-                        <a href="https://sisocs.org/">SISOCS</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="col-md-3 mb-md-0 mb-3">
-                  <h5 class="text-uppercase textoColorBlanco"></h5>
-                  <ul class="list-unstyled textoColorBlanco">
-                     <li>
-                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
-                     </li>
-                  </ul>
-               </div>
+      <footer>
+        <div class=" py-3 textoColorBlanco fondoColorGrisOscuroClaro container-fluid">
+              <div class="row logosEntidades">
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a href="https://www.presidencia.gob.hn/"><img class="transicion" src="img/logos/logoRepublica.png" alt="Logo del Gobierno de la República de Honduras"></a>            
+                 </div>
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a href="https://www.usaid.gov/honduras"><img class="transicion" src="img/logos/usaid.png" alt="Logo de USAID"></a>
+                    
+                 </div>
+                 <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <a href="https://www.worldbank.org/"><img class="transicion" src="img/logos/worldBank.png" alt="Logo del Banco Mundial"></a>
+                    
+                 </div>
+              </div>
+           </div>  
+     <div class="container-fluid text-center text-md-left fondoColorGrisOscuro pt-5">
+           
+        <div class="row pl-5 pr-5 pb-2 pt-2">
+           <div class="col-md-3 mt-md-0 mt-3">
+              <h5 class="text-uppercase textoColorBlanco">Portal de Contrataciones Abiertas de Honduras </h5>
+              <p class="textoColorGris textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
+           </div>
+           <hr class="clearfix w-100 d-md-none pb-3">
+           <div class=" col-md-3 mb-md-0 mb-3">
+               <h5 class="text-uppercase textoColorBlanco">Información</h5>
+               <ul class="list-unstyled textoColorBlanco">
+                  <li>
+                     <a href="acerca.html">Acerca</a>
+                  </li>
+                  <li>
+                     <a href="preguntas.html">Preguntas Frecuentes</a>
+                  </li>
+               </ul>
             </div>
-         </div>
-         <div class="footer-copyright text-center py-3 textoColorBlanco fondoColorGrisOscuro">Oficina Normativa de Contratación y Adquisiciones del Estado
-            <a href="" class="textoColorBlanco"> ONCAE</a>
-         </div>
-      </footer>
+           <div class=" col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
+              <ul class="list-unstyled textoColorBlanco">
+                 <li>
+                    <a href="http://www.oncae.gob.hn/">ONCAE</a>
+                 </li>
+                 <li>
+                    <a href="http://www.oncae.gob.hn/">SEFIN</a>
+                 </li>
+                 <li>
+                    <a href="https://sisocs.org/">SISOCS</a>
+                 </li>
+              </ul>
+           </div>
+           <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase textoColorBlanco"></h5>
+              <ul class="list-unstyled textoColorBlanco">
+                 <li>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </div>
+  </footer>
       <!-- CIERRE DE PIE DE PAGINA -->
       <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
       <script src="plugins/bootstrap-4.3.1/js/bootstrap.min.js"></script>
       <script src="plugins/countto/jquery.countTo.js"></script>
+      <script src="plugins/popper-1.15.0/popper.min.js"></script>
+      <script src="plugins/tippy-4.3.1/index.all.min.js"></script>
+      <script src="plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+      <script src="plugins/jquery-mask-1.14.15/jquery.mask.min.js"></script>
       <script>
          $('.opcionFiltroBusquedaPagina').on('click',function(e){
            $(e.currentTarget).addClass('active')
          })
+
+         tippy('#informacionTipoDatos', {
+           arrow: true,
+           arrowType: 'round',
+           content:'¿Que son estos tipos de datos?'
+         });
+         tippy('#buscarInformacion', {
+           arrow: true,
+           arrowType: 'round',
+           content:'Haz click para buscar'
+         });
+         $.datepicker.regional['es'] = {
+         closeText: 'Cerrar',
+         prevText: '< Ant',
+         nextText: 'Sig >',
+         currentText: 'Hoy',
+         monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+         monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+         dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+         dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+         dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+         weekHeader: 'Sm',
+         dateFormat: 'dd/mm/yy',
+         firstDay: 1,
+         isRTL: false,
+         showMonthAfterYear: false,
+         yearSuffix: ''
+         };
+         $.datepicker.setDefaults( $.datepicker.regional[ "es" ] );
+         $('.fecha').datepicker({
+                "dateFormat": 'yy-mm-dd'
+            });
+         $('.fecha').mask('0000-00-00');
       </script>
    </body>
 </html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portal de Contrataciones Abiertas de Honduras - Compradores</title>
+      <meta name="description" content="Portal del Estandar de Datos de Contrataciones Abiertas en Honduras"/>
+      <meta name="keywords" content="OCDS, EDCA, Honduras, ONCAE, Contrataciones, Abiertas"/>
+      <link rel="stylesheet" href="plugins/bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="plugins/fontawesome-free-5.8.2/css/all.min.css" >
+      <link rel="stylesheet" href="plugins/animate-3.7.0/animate.css">
+      <link rel="stylesheet" href="plugins/json-viewer/json-viewer.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" >
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
+         <a class="navbar-brand" href="index.html">
+         <img src="img/logos/logoPortalEdca.svg" alt="Logo Portal de Contrataciones Abiertas de Honduras">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="barraNavegacionPortal">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+               <li class="nav-item active">
+                  <a class="nav-link transicion" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link transicion" href="visualizaciones.html">Visualizaciones</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link transicion" href="proveedores.html">Proveedores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link transicion" href="compradores.html">Compradores</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link transicion" href="api.html">API</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link transicion" href="descargas.html">Descargas</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link transicion" href="acerca.html">Acerca</a>
+                 </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container tamanoMinimo">
+         <div class="row">
+            <div class="col-md-12">
+               <h1 class="textoColorPrimario mt-3 tituloDetalleProceso">Preguntas Frecuentes</h1>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-12">
+                  <p class="textoAlineadoJustificado">
+                  El Portal de Contrataciones Abiertas de Honduras, contiene un conjunto de datos publicado por multiples instituciones, con una licencia que permite su reutilización para cualquier propósito y se valida con el Estándar <a href="http://standard.open-contracting.org/latest/es/getting_started/">OCDS</a>. Los datos se cargan en diversos periodos dependiento de cada institución (Ejemplo: 1 dia, 1 Semana).
+                  </p>
+            </div>
+         </div>
+         <div class="row">
+               <div class="col-md-12">
+                  <h5 class="textoColorTitulo">¿Que se incluye en los tipos de datos JSON y CSV ?</h5>
+                     <p class="textoAlineadoJustificado">
+                     Se incluye el conjunto de datos de los procesos de contración en el Estándar <a href="http://standard.open-contracting.org/latest/es/getting_started/">OCDS</a>.
+                     para que puedan ser utilizados en el formato que más sea conveniente para los usuarios finales.
+                     </p>
+               </div>
+            </div>
+            <div class="row">
+                  <div class="col-md-12">
+                     <h5 class="textoColorTitulo">¿Que es un tipo de dato JSON?</h5>
+                        <p class="textoAlineadoJustificado">
+                              JSON es un formato ligero de intercambio de datos. Es fácil para las personas de leer y escribir. Es fácil para las máquinas analizar y generar.
+                              <br>
+                              Ejemplo: 
+                        </p>
+                           <div id="jsonEjemplo" class="cajonSombreado"></div>
+                  </div>
+               </div>
+               <div class="row">
+                     <div class="col-md-12 mb-5">
+                        <h5 class="textoColorTitulo">¿Que es un tipo de dato CSV ?</h5>
+                           <p class="textoAlineadoJustificado">
+                                 Los archivos CSV son un tipo de documento en formato abierto sencillo para representar datos en forma de tabla, en las que las columnas se separan por comas (o punto y coma en donde la coma es el separador decimal: Chile, Perú, Argentina, España, Brasil...) y las filas por saltos de línea.
+                                 <br>
+                                 Ejemplo:
+                           </p>
+                           <div class=" ">
+                                 <table class="tablaGeneral cajonSombreado ">
+                                    <thead>
+                                       <tr>
+                                          <th class="textoAlineadoCentrado">
+                                             <span>ocid</span>
+                                          </th>
+                                          <th class="textoAlineadoCentrado">
+                                             <span>id</span>
+                                          </th>
+                                          <th class="textoAlineadoCentrado">
+                                                <span>date</span>
+                                             </th>
+                                             <th class="textoAlineadoCentrado">
+                                                   <span>language</span>
+                                          </th>
+
+
+                                       </tr>
+                                 </thead>
+                                 <tbody>
+                                       <tr>
+                                             <td data-label="ocid">ocds-213czf-000-00001</td>
+                                             <td data-label="id">ocds-213czf-000-00001-05-contract</td>
+                                             <td data-label="date">2010-05-10T10:30:00Z</td>
+                                             <td data-label="language">es</td>
+                                       </tr>
+                                       <tr>
+                                             <td data-label="ocid">ocds-213czf-000-00034</td>
+                                             <td data-label="id">ocds-213czf-000-00034-05-contract</td>
+                                             <td data-label="date">2010-11-05T9:35:00Z</td>
+                                             <td data-label="language">es</td>
+                                       </tr>
+                                       <tr>
+                                             <td data-label="ocid">ocds-213czf-000-00001</td>
+                                             <td data-label="id">ocds-213czf-000-00001-05-contract</td>
+                                             <td data-label="date">2010-12-10T11:46:00Z</td>
+                                             <td data-label="language">es</td>
+                                       </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <p>Este conjunto de datos quedaría representado en el formato CSV de la siguiente manera:</p>
+                           <p class="textoColorTitulo cajonSombreado">ocid,id,date,language <br>
+                              ocds-213czf-000-00001,ocds-213czf-000-00001-05-contract,2010-05-10T10:30:00Z,es <br>
+                              ocds-213czf-000-00034,ocds-213czf-000-00034-05-contract,2010-11-05T9:35:00Z,es <br>
+                              ocds-213czf-000-00001,ocds-213czf-000-00001-05-contract,2010-12-10T11:46:00Z,es <br>
+                           </p>
+                     </div>
+                  </div>
+       
+      </div>
+      <!-- PIE DE PAGINA -->
+      <footer>
+        <div class=" py-3 textoColorBlanco fondoColorGrisOscuroClaro container-fluid">
+              <div class="row logosEntidades">
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a href="https://www.presidencia.gob.hn/"><img class="transicion" src="img/logos/logoRepublica.png" alt="Logo del Gobierno de la República de Honduras"></a>            
+                 </div>
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a href="https://www.usaid.gov/honduras"><img class="transicion" src="img/logos/usaid.png" alt="Logo de USAID"></a>
+                    
+                 </div>
+                 <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <a href="https://www.worldbank.org/"><img class="transicion" src="img/logos/worldBank.png" alt="Logo del Banco Mundial"></a>
+                    
+                 </div>
+              </div>
+           </div>  
+     <div class="container-fluid text-center text-md-left fondoColorGrisOscuro pt-5">
+           
+        <div class="row pl-5 pr-5 pb-2 pt-2">
+           <div class="col-md-3 mt-md-0 mt-3">
+              <h5 class="text-uppercase textoColorBlanco">Portal de Contrataciones Abiertas de Honduras </h5>
+              <p class="textoColorGris textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
+           </div>
+           <hr class="clearfix w-100 d-md-none pb-3">
+           <div class=" col-md-3 mb-md-0 mb-3">
+               <h5 class="text-uppercase textoColorBlanco">Información</h5>
+               <ul class="list-unstyled textoColorBlanco">
+                  <li>
+                     <a href="acerca.html">Acerca</a>
+                  </li>
+                  <li>
+                     <a href="preguntas.html">Preguntas Frecuentes</a>
+                  </li>
+               </ul>
+            </div>
+           <div class=" col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
+              <ul class="list-unstyled textoColorBlanco">
+                 <li>
+                    <a href="http://www.oncae.gob.hn/">ONCAE</a>
+                 </li>
+                 <li>
+                    <a href="http://www.oncae.gob.hn/">SEFIN</a>
+                 </li>
+                 <li>
+                    <a href="https://sisocs.org/">SISOCS</a>
+                 </li>
+              </ul>
+           </div>
+           <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase textoColorBlanco"></h5>
+              <ul class="list-unstyled textoColorBlanco">
+                 <li>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </div>
+  </footer>
+      <!-- CIERRE DE PIE DE PAGINA -->
+      <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+      <script src="plugins/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+      <script src="plugins/countto/jquery.countTo.js"></script>
+      <script src="plugins/popper-1.15.0/popper.min.js"></script>
+      <script src="plugins/tippy-4.3.1/index.all.min.js"></script>
+      <script src="plugins/json-viewer/json-viewer.js"></script>
+      <script>
+         $('.botonAbrirElementoApi').on('click',function(e){
+           if($(e.currentTarget).parent().parent().hasClass('abierto')){
+             $(e.currentTarget).parent().parent().removeClass('abierto');
+           }else{
+             $(e.currentTarget).parent().parent().addClass('abierto');
+           }
+          $(e.currentTarget).parent().parent().find('.elementoApiInformacion').slideToggle( "slow", function() {
+         });
+         });
+         
+         $('.metodo').on('click',function(e){
+           if($(e.currentTarget).parent().hasClass('abierto')){
+             $(e.currentTarget).parent().removeClass('abierto');
+           }else{
+             $(e.currentTarget).parent().addClass('abierto');
+           }
+          $(e.currentTarget).parent().find('.metoApiInformacion').slideToggle( "slow", function() {
+         });
+         });
+         
+         
+         tippy('.botonAbrirElementoApi', {
+             arrow: true,
+             arrowType: 'round',
+             content:'Expandir Métodos'
+           });
+           tippy('.metodo', {
+             arrow: true,
+             arrowType: 'round',
+             content:'Expandir',
+             placement:'top-end'
+           });
+           json={
+    "ocid": "ocds-213czf-000-00001",
+    "id": "ocds-213czf-000-00001-05-contract",
+    "date": "2010-05-10T10:30:00Z",
+    "language": "en",
+    "tag": [
+        "contract"
+    ],
+    "initiationType": "tender",
+    "parties": [
+       {
+            "identifier": {},
+            "name": "London Borough of Barnet",
+            "address": {},
+            "contactPoint": {},
+            "roles": [],
+            "id": "GB-LAC-E09000003"
+        },
+       {
+            "identifier": {},
+            "additionalIdentifiers": [],
+            "name": "AnyCorp Cycle Provision",
+            "address": {},
+            "contactPoint": {},
+            "roles": [],
+            "id": "GB-COH-1234567844"
+        }
+    ]};
+           $('#jsonEjemplo').jsonview(json);
+      </script>
+   </body>
+</html>

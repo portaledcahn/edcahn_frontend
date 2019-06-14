@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Portal EDCA - Proceso</title>
+      <title>Portal de Contrataciones Abiertas de Honduras - Proceso</title>
       <meta name="description" content="Portal del Estandar de Datos de Contrataciones Abiertas en Honduras"/>
       <meta name="keywords" content="OCDS, EDCA, Honduras, ONCAE, Contrataciones, Abiertas"/>
       <link rel="stylesheet" href="plugins/bootstrap-4.3.1/css/bootstrap.min.css">
@@ -13,36 +13,39 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" >
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
-         <a class="navbar-brand" href="index.html">
-         <img src="img/logos/portalEdca.png" style="max-height: 40px" alt="Logo Portal Edca">
-         </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="barraNavegacionPortal">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-               <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="visualizaciones.html">Visualizaciones</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="proveedores.html">Proveedores</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="compradores.html">Compradores</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="api.html">API</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="descargas.html">Descargas</a>
-               </li>
-            </ul>
-         </div>
-      </nav>
+         <nav class="navbar navbar-expand-lg  navbar-dark fixed-top  fondoColorPrimario">
+               <a class="navbar-brand" href="index.html">
+               <img src="img/logos/logoPortalEdca.svg" alt="Logo Portal de Contrataciones Abiertas de Honduras">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barraNavegacionPortal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="barraNavegacionPortal">
+                  <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                     <li class="nav-item active">
+                        <a class="nav-link transicion" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="visualizaciones.html">Visualizaciones</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="proveedores.html">Proveedores</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="compradores.html">Compradores</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="api.html">API</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link transicion" href="descargas.html">Descargas</a>
+                     </li>
+                     <li class="nav-item">
+                          <a class="nav-link transicion" href="acerca.html">Acerca</a>
+                       </li>
+                  </ul>
+               </div>
+            </nav>
       <div class="container mb-5 tamanoMinimo">
          <div class="row">
             <div class="col-md-12">
@@ -99,7 +102,7 @@
                </div>
                <div class="botonPropiedadProceso" propiedad="invitados" title="Invitados">
                   <img src="img/proceso/invitados.png" alt="Invitados">
-                  <div class="textoBotonPropiedadProceso">Invitados</div>
+                  <div class="textoBotonPropiedadProceso"> Proveedores Invitados</div>
                </div>
                <div class="botonPropiedadProceso" propiedad="solicitados" title="Items Solicitados">
                   <img src="img/proceso/items.png" alt="Items Solicitados">
@@ -112,10 +115,16 @@
                      Datos de la Convocatoria
                   </h4>
                   <div class="col-6 col-sm-6 col-md-6 textoAlineadoDerecha">
-                     <h4 class="descargaIconos">
+                     <h4 class="descargaIconos enLinea">
                         <span  class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.JSON</span>
                         <span class="textoColorGris textoAlineadoDerecha p-1 cursorMano transicion"><i class="fas fa-file-download"></i>&nbsp;.CSV</span>
                      </h4>
+                     <h4 class="enLinea mb-0 enLinea alineadoArriba">
+                           <div class="textoAlineadoCentrado cursorMano botonAyuda transicion" id="informacionTipoDatos">
+                                 <i class="fas fa-question" onclick="location.href='preguntas.html'"></i>
+                              </div>
+                              
+                        </h4>
                   </div>
                </div>
                <div class=" cajonSombreado contenedorDetalleProcesoDatos">
@@ -123,12 +132,7 @@
                      <div class="contenedorTablaCaracteristicas">
                         <table>
                            <tbody>
-                              <tr>
-                                 <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
-                                 <td class="contenidoTablaCaracteristicas"> 
-                                    ocds-213czf-000-00001
-                                 </td>
-                              </tr>
+                              
                               <tr>
                                  <td class="tituloTablaCaracteristicas">Comprador:</td>
                                  <td class="contenidoTablaCaracteristicas"> 
@@ -165,6 +169,12 @@
                                     2019-04-26
                                  </td>
                               </tr>
+                              <tr>
+                                    <td class="tituloTablaCaracteristicas">ID Proceso (OCID):</td>
+                                    <td class="contenidoTablaCaracteristicas"> 
+                                       ocds-213czf-000-00001
+                                    </td>
+                                 </tr>
                            </tbody>
                         </table>
                      </div>
@@ -222,7 +232,7 @@
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <h4 class="text-primary-edcax">Datos de Contacto</h4>
+                     <h4 class="text-primary-edcax">Datos de Contacto del Comprador</h4>
                      <div class=" cajonSombreado ">
                         <div class="contenedorProceso informacionProceso">
                            <div class="contenedorTablaCaracteristicas">
@@ -510,45 +520,66 @@
          </div>
       </div>
       <!-- PIE DE PAGINA -->
-      <footer class="page-footer font-small fondoColorGrisOscuroClaro pt-4">
-         <div class="container-fluid text-center text-md-left">
-            <div class="row">
-               <div class="col-md-3 mt-md-0 mt-3">
-                  <a href="https://www.presidencia.gob.hn/"><img src="img/footer/logorepublica.png" class="imagenFooterPrincipal" alt="Logo Presidencia de la República"></a>
-               </div>
-               <div class="col-md-3 mt-md-0 mt-3">
-                  <h5 class="text-uppercase textoColorBlanco">Portal EDCA </h5>
-                  <p class="textoColorBlanco textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
-               </div>
-               <hr class="clearfix w-100 d-md-none pb-3">
-               <div class="col-md-3 mb-md-0 mb-3">
-                  <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
-                  <ul class="list-unstyled textoColorBlanco">
-                     <li>
-                        <a href="http://www.oncae.gob.hn/">ONCAE</a>
-                     </li>
-                     <li>
-                        <a href="http://www.oncae.gob.hn/">SEFIN</a>
-                     </li>
-                     <li>
-                        <a href="https://sisocs.org/">SISOCS</a>
-                     </li>
-                  </ul>
-               </div>
-               <div class="col-md-3 mb-md-0 mb-3">
-                  <h5 class="text-uppercase textoColorBlanco"></h5>
-                  <ul class="list-unstyled textoColorBlanco">
-                     <li>
-                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
-                     </li>
-                  </ul>
-               </div>
+      <footer>
+        <div class=" py-3 textoColorBlanco fondoColorGrisOscuroClaro container-fluid">
+              <div class="row logosEntidades">
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a href="https://www.presidencia.gob.hn/"><img class="transicion" src="img/logos/logoRepublica.png" alt="Logo del Gobierno de la República de Honduras"></a>            
+                 </div>
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a href="https://www.usaid.gov/honduras"><img class="transicion" src="img/logos/usaid.png" alt="Logo de USAID"></a>
+                    
+                 </div>
+                 <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <a href="https://www.worldbank.org/"><img class="transicion" src="img/logos/worldBank.png" alt="Logo del Banco Mundial"></a>
+                    
+                 </div>
+              </div>
+           </div>  
+     <div class="container-fluid text-center text-md-left fondoColorGrisOscuro pt-5">
+           
+        <div class="row pl-5 pr-5 pb-2 pt-2">
+           <div class="col-md-3 mt-md-0 mt-3">
+              <h5 class="text-uppercase textoColorBlanco">Portal de Contrataciones Abiertas de Honduras </h5>
+              <p class="textoColorGris textoAlineadoJustificado">Portal para realizar el seguimiento de los procesos de contratación y para obtener conocimientos sobre lo que ocurre con ellos en Honduras. </p>
+           </div>
+           <hr class="clearfix w-100 d-md-none pb-3">
+           <div class=" col-md-3 mb-md-0 mb-3">
+               <h5 class="text-uppercase textoColorBlanco">Información</h5>
+               <ul class="list-unstyled textoColorBlanco">
+                  <li>
+                     <a href="acerca.html">Acerca</a>
+                  </li>
+                  <li>
+                     <a href="preguntas.html">Preguntas Frecuentes</a>
+                  </li>
+               </ul>
             </div>
-         </div>
-         <div class="footer-copyright text-center py-3 textoColorBlanco fondoColorGrisOscuro">Oficina Normativa de Contratación y Adquisiciones del Estado
-            <a href="" class="textoColorBlanco"> ONCAE</a>
-         </div>
-      </footer>
+           <div class=" col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase textoColorBlanco">Enlaces</h5>
+              <ul class="list-unstyled textoColorBlanco">
+                 <li>
+                    <a href="http://www.oncae.gob.hn/">ONCAE</a>
+                 </li>
+                 <li>
+                    <a href="http://www.oncae.gob.hn/">SEFIN</a>
+                 </li>
+                 <li>
+                    <a href="https://sisocs.org/">SISOCS</a>
+                 </li>
+              </ul>
+           </div>
+           <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase textoColorBlanco"></h5>
+              <ul class="list-unstyled textoColorBlanco">
+                 <li>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </div>
+  </footer>
       <!-- CIERRE DE PIE DE PAGINA -->
       <script src="plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
       <script src="plugins/bootstrap-4.3.1/js/bootstrap.min.js"></script>
@@ -643,6 +674,11 @@
            content:'Items Solicitados',
            placement:'bottom-end'
            });
+           tippy('#informacionTipoDatos', {
+           arrow: true,
+           arrowType: 'round',
+           content:'¿Que son estos tipos de datos?'
+         });
            
          });
          
